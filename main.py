@@ -1,9 +1,19 @@
+import nltk
+
+
+
 import streamlit as st
 import pickle
 from nltk.corpus import stopwords
 from nltk.stem import PorterStemmer
 from string import punctuation
 from nltk.tokenize import word_tokenize
+nltk.download("stopwords")
+nltk.download("punkt")
+nltk.download("punkt_tab")
+
+
+
 stp = stopwords.words("english")
 
 model = pickle.load(open("model (1).pkl","rb"))
